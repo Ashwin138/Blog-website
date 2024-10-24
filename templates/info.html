@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+{% block title %}Info Page{% endblock title %}
+
+{% block body %}
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+
+    .info-header {
+        text-align: center;
+        margin: 50px 0 20px;
+    }
+
+    .info-header h1 {
+        font-size: 3em;
+        color: #34495e;
+        margin-bottom: 10px;
+    }
+
+    .info-header p {
+        font-size: 1.2em;
+        color: #7f8c8d;
+        line-height: 1.6;
+    }
+
+    .card {
+        background-color: #ffffff;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px 0;
+        transition: all 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h2 {
+        font-size: 1.8em;
+        color: #2c3e50;
+        margin-bottom: 15px;
+    }
+
+    .card p {
+        font-size: 1em;
+        color: #7f8c8d;
+        line-height: 1.6;
+    }
+
+    .highlight {
+        background-color: #1abc9c;
+        color: #ffffff;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    @media (max-width: 992px) {
+        .card-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .card-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .info-header h1 {
+            font-size: 2em;
+        }
+
+        .info-header p {
+            font-size: 1em;
+        }
+    }
+
+</style>
+
+<div class="container">
+    <div class="info-header">
+        <h1>Welcome to the Info Page</h1>
+        <p>Here you'll find detailed information about our website, its purpose, and how it can benefit you.</p>
+    </div>
+
+    <div class="card-grid">
+        <div class="card">
+            <h2>About Us</h2>
+            <p>We are a dedicated team focused on delivering high-quality content for blog enthusiasts. Our goal is to
+                provide a platform where you can <span class="highlight">share your thoughts</span> and connect with others.</p>
+        </div>
+        <div class="card">
+            <h2>Our Mission</h2>
+            <p>Our mission is to create a space where individuals can express their ideas freely. We believe in the power of words and the positive change it can bring.</p>
+        </div>
+        <div class="card">
+            <h2>Why Join Us?</h2>
+            <p>By joining our community, you get to be part of an ever-growing network of writers, readers, and thinkers. Share your story with the world.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or feedback, feel free to <span class="highlight">reach out</span> to us. We are always here to help and listen to your suggestions.</p>
+    </div>
+</div>
+{% endblock body %}
